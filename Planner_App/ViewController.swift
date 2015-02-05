@@ -65,6 +65,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         forRowAtIndexPath indexPath: NSIndexPath) {
             cell.backgroundColor = colorForIndex(indexPath.row)
     }
+    
+    // What happens when an item is deleted
+    func toDoItemDeleted(toDoItem: ToDoItem) {
+        let index = (toDoList as NSArray).indexOfObject(toDoItem)
+        if index == NSNotFound { return }
+        
+        // could removeAtIndex in the loop but keep it here for when indexOfObject works
+        toDoList.removeAtIndex(index)
+        
+        // use the UITableView to animate the removal of this row
+        tableView.beginUpdates()
+        let indexPathForRow = NSIndexPath(forRow: index, inSection: 0)
+        tableView.deleteRowsAtIndexPaths([indexPathForRow], withRowAnimation: .Fade)
+        tableView.endUpdates()    
+    }
  
 }
 

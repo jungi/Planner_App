@@ -10,11 +10,11 @@ import UIKit
 
 class ToDoItem: NSObject {
     var text: String
-    var done: Bool
+    var completed: Bool
     
     init(text: String) {
         self.text = text
-        self.done = false
+        self.completed = false
     }
     
     

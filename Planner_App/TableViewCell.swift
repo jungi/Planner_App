@@ -8,11 +8,24 @@
 
 import UIKit
 
+
+
+
+// A protocol that the TableViewCell uses to inform its delegate of state change
+protocol TableViewCellDelegate {
+    // indicates that the given item has been deleted
+    func toDoItemDeleted(todoItem: ToDoItem)
+}
+
 class TableViewCell: UITableViewCell {
     let gradientLayer = CAGradientLayer()
     var originalCenter = CGPoint()
     var deleteOnDragRelease = false
     
+    // The object that acts as delegate for this cell.
+    var delegate: TableViewCellDelegate?
+    // The item that this cell renders.
+    var toDoItem: ToDoItem?
     
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported")
@@ -65,7 +78,26 @@ class TableViewCell: UITableViewCell {
                 // if the item is not being deleted, snap back to the original location
                 UIView.animateWithDuration(0.2, animations: {self.frame = originalFrame})
             }
+            
+            if deleteOnDragRelease {
+                if delegate != nil && toDoItem != nil {
+                    // notify the delegate that this item should be deleted
+                    delegate!.toDoItemDeleted(toDoItem!)
+                }
+            }
         }
     }
+    
+    override func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if let panGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer {
+            let translation = panGestureRecognizer.translationInView(superview!)
+            if fabs(translation.x) > fabs(translation.y) {
+                return true
+            }
+            return false
+        }
+        return false
+    }
+
     
 }
