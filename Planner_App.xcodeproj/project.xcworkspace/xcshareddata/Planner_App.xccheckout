@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BE9F06F2-D7F3-49B7-8DA9-F0F37F1B67D7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Planner_App</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EE9DB581B56036AD00A9835BB2C00C2025F4793D</key>
+		<string>https://github.com/jungi/Planner_App</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Planner_App.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EE9DB581B56036AD00A9835BB2C00C2025F4793D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jungi/Planner_App</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EE9DB581B56036AD00A9835BB2C00C2025F4793D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EE9DB581B56036AD00A9835BB2C00C2025F4793D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Planner_App</string>
+		</dict>
+	</array>
+</dict>
+</plist>
