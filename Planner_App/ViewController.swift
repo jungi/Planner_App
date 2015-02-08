@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         toDoList.append(ToDoItem(text: "Do task 1"))
         toDoList.append(ToDoItem(text: "Do task 2"))
         toDoList.append(ToDoItem(text: "Do task 3"))
-        toDoList.append(ToDoItem(text: "Do task 4"))
+        toDoList.append(ToDoItem(text: "Do task 4!"))
     }
 
     // Initialize table
